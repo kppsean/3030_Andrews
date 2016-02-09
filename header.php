@@ -3,9 +3,9 @@
 <html>
 <head>
 	<meta name="description" content="Check out my page using a global header and footer." />
-	<title>My Page</title>
-
-	<link rel="stylesheet" href="/css/style.css" />
+	<title>ecommerce</title>
+	<link href="css/styles.css" rel="stylesheet" type="text/css" media="all" />
+	
 </head>
 
 
@@ -13,10 +13,9 @@
 <header>
 	<nav>
 	   <ul>
-	      <li><a href="">Link 1</a></li>
-	      <li><a href="">Link 2</a></li>
-	      <li><a href="">Link 3</a></li>
-	      <li><a href="">Link 4</a></li>
+	      <li><a href="index.php">Home</a></li>
+	      <li><a href="">Soon to be Categories</a></li>
+	      <li><a href="">Soon to be All Products</a></li>
 	   </ul>
 	</nav>
 </header>
