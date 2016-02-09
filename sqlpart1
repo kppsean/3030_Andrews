@@ -1,0 +1,36 @@
+CREATE DATABASE ecommerce;
+
+create table categories (
+	id int auto_increment not null primary key,
+	category_name varchar(200) not null);
+
+create table products (
+	id int auto_increment not null primary key,
+	category_id int not null,
+	product_name varchar(200) not null,
+	price decimal(6,2) not null,
+	quantity_remaining int not null,
+	description text not null,
+	image varchar(200) not null
+);
+
+create table cart (
+	id int auto_increment not null primary key,
+	session_id varchar(200) not null,
+	product_id int not null,
+	quantity int not null
+);
+
+
+INSERT INTO `ecommerce`.`categories` (`id`, `category_name`) VALUES ('1', 'Drum Heads');
+INSERT INTO `ecommerce`.`categories` (`id`, `category_name`) VALUES ('2', 'Drum Bass Pedals');
+
+
+
+INSERT INTO `ecommerce`.`products` (`id`, `category_id`, `product_name`, `price`, `quantity_remaining`, `description`, `image`) VALUES ('1', '1', 'Evans G2 Tompack, Coated, Standard (12 inch, 13 inch, 16 inch)', '36.99', '8', 'A perfect blend of depth, sustain, and attack…the G2 is a two-ply head (7mil each) featuring extraordinary consistency and durability. Its versatility makes it a perfect choice for the working drummer who switches between styles. It makes rack toms sing and floor toms growl. The coated version delivers additional warmth, focus, and depth.', 'evanskins.jpg');
+
+INSERT INTO `ecommerce`.`products` (`id`, `category_id`, `product_name`, `price`, `quantity_remaining`, `description`, `image`) VALUES ('2', '1', 'Remo PP-0900-ES Ebony Suede Power ProPack Drumheads', '55.40', '8', 'Remo ProPacks are a great way to get the heads you need in one convenient package! The Ebony Suede heads are medium-weight heads made from a proprietary processed single ply 10 mil Mylar film with a 5 mil reverse dot to produce a warm, open and resonant sound with a warm attack. Ebony Suede heads have a unique black appearance and produce a sound that''s a cross between the brightness and resonance of clear and the midrange articulation of coated.', 'remoskins.jpg ');
+
+INSERT INTO `ecommerce`.`products` (`id`, `category_id`, `product_name`, `price`, `quantity_remaining`, `description`, `image`) VALUES ('3', '2', 'Tama HP200PTW Iron Cobra 200 Double Bass Pedal', '179.99', '4', 'Upgrade your drum kit with the HP200PTW Iron Cobra 200 double kick drum pedal. Designed with the same ideas as the Iron Cobra 900, the 200 gives you the performance you want at a killer price. Tama''s Spring Tight pedal spring adjustment, the HP200PTW gives you an super smooth and fast response. The HP200PTW also features Tama''s double-chain Power Glide Cam, for increased power and speed. You can even dial in your ideal beater angle to deliver bug punch with every kick. Double your Bass drum pleasure with the Tama HP200PTW Iron Cobra 200 double kick drum pedal.', 'ironcobra.jpg');
+
+INSERT INTO `ecommerce`.`products` (`id`, `category_id`, `product_name`, `price`, `quantity_remaining`, `description`, `image`) VALUES ('4', '2', 'DW Drum Workshop 3000 SERIES DOUBLE PEDAL', '219.99', '28', 'The DW 3002 Double Bass Drum Pedal offers increased stability with the upgraded double-chain turbo (centered cam) drive systems. The slotted stroke adjustment allows infinite beater angle adjustment and the ball-bearing rocker reduces friction. The dual adjustable toe clamp can be fine-tuned for any bass drum counter-hoop width. Includes a 2-way 101 beater.', 'dw3k.jpg');
