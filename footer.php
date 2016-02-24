@@ -1,11 +1,7 @@
-</div>
-<footer>
-   <ul>
-      <li><a href="">Link 1</a></li>
-      <li><a href="">Link 2</a></li>
-      <li><a href="">Link 3</a></li>
-      <li><a href="">Link 4</a></li>
-   </ul>
-</footer>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+<script>
+      $(document).foundation();
+    </script>
 </body>
 </html>

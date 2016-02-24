@@ -1,14 +1,20 @@
 <?php
+
+include("global.php");
+include("header.php");
+
+$result = mysqli_query($connection,"select * from categories order by category_name");
+
+while ($row = mysqli_fetch_assoc($result)) {
 	
-	include("global.php");
-	include("header.php");
-	?>
+	echo "<a href='product_list.php?category_id=" . $row["id"] . "'>";
+	echo $row["category_name"];
+	echo "</a>";
 	
-<h1><a href="product_list.php?id=1">Drum Heads</a></h1>
-<h1><a href="product_list.php?id=2">Drum Base Pedals</a></h1>
+	
+	
+}
 
+include("footer.php");
 
-
-<?php
-	include("footer.php")
 ?>
